@@ -1823,8 +1823,8 @@ def doConfigure(myenv):
         conf.Finish()
 
     if not myenv.ToolchainIs('msvc'):
-        if not AddToCXXFLAGSIfSupported(myenv, '-std=c++11'):
-            myenv.ConfError('Compiler does not honor -std=c++11')
+        if not AddToCXXFLAGSIfSupported(myenv, '-std=gnu++11'):
+            myenv.ConfError('Compiler does not honor -std=gnu++11')
         if not AddToCFLAGSIfSupported(myenv, '-std=c99'):
             myenv.ConfError("C++11 mode selected for C++ files, but can't enable C99 for C files")
 
