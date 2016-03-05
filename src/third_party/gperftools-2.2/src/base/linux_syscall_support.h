@@ -2279,7 +2279,7 @@ struct kernel_stat {
     LSS_INLINE _syscall2(int, fstat64,             int, f,
                          struct kernel_stat64 *, b)
     LSS_INLINE _syscall5(int, _llseek,     uint, fd, ulong, hi, ulong, lo,
-                         loff_t *, res, uint, wh)
+                         off_t *, res, uint, wh)
 #ifdef __PPC64__
     LSS_INLINE _syscall6(void*, mmap,              void*, s,
                          size_t,                   l, int,               p,
